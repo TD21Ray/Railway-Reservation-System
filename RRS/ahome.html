@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin-home</title>
+	<link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/train.png" type="image/icon type">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans&family=Ms+Madi&display=swap" rel="stylesheet">
+	<style type="text/css">
+	* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+    	#header {
+    		font-family: 'Dosis';
+    		background-color: #0c9299;
+    		padding: 12px;
+    		padding-bottom: 6px;
+    	}
+    	#header > #logo {
+    		position: relative;
+    		padding: 34px;
+    		padding-left: 25px;
+    		font-size: 30px;
+    		top: 0px;
+    	}
+    	#header > #logoname {
+    		margin-left: -35px;
+    		top: -12px;
+    		font-size: 30px;
+    		position: relative;
+    		left: 0px;
+    	}
+    	#header > #headerlink {
+    		position: relative;
+    		padding: 0 10px;
+    		font-size: 20px;
+    		top: -22px;
+    		left: 75%;
+    		margin-right: -7px;
+    		margin-left: 8px;
+    	}
+    	/*#header > #profile {
+    		position: relative;
+    		top: -10px;
+    		left: 74%;
+    	}
+    	#header > #profile img {
+    		position: relative;
+    		margin-left: -5px;
+    		top: 0px;
+    		left: 6px;
+    		height: 35px;
+    		width: 35px;
+    	}*/
+    	#navbar button{
+    		margin-top: 10px;
+			background-color: #0c9299;
+			border: 3px solid darkblue;
+			border-radius: 10px;
+			width: 400px;
+			height: 70px;
+			padding: 0;
+			margin-left: 120px;
+		}
+		#navbar img{
+			left: 0px;
+			margin-right: 10px;
+			height: 55px;
+			width: 55px;
+			vertical-align: middle;
+
+		}
+		#navbar span{
+			font-family: 'Dosis';
+			font-size: 20px;
+			color: white;
+			vertical-align: middle;
+		}
+		.dropbtn {
+		  background-color: #04AA6D;
+		  color: white;
+		  padding: 16px;
+		  font-size: 16px;
+		  border: none;
+		}
+
+		.dropdown {
+		  position: relative;
+		  display: inline-block;
+		}
+
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f1f1f1;
+		  width: 400px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+
+		.dropdown-content a {
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		  text-align: center;
+		}
+
+		.dropdown-content a:hover {background-color: #ddd;}
+
+		.dropdown:hover .dropdown-content {display: block;}
+
+		.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<span id="logo"><a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/train.png"/></a></span>
+		<span id="logoname">PNRS RRS</span>
+		<span id="headerlink"><a href="ahome.html">Home</a> | <a href="index.html">Logout</a></span>
+		<!-- <span id="profile"><a href="#"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png"/></a></span> -->
+	</div>
+
+	<div id="navbar">
+		<nav>
+			<div class="dropdown">
+				<button class="dropbtn" style="margin-left: 300px;"><img  src="https://cdn-icons-png.flaticon.com/512/3267/3267449.png"/><span>Train Information Management</span></button>
+
+			  <div class="dropdown-content" style="margin-left:300px">
+			    <a href="addTrain.html">Add Train</a>
+			    <a href="deleteTrain.html">Delete Train</a>
+			    <a href="viewTrain.html">View Train</a>
+			  </div>
+			</div>
+
+			<div class="dropdown">
+				<button class="dropbtn"><img src="https://cdn-icons-png.flaticon.com/512/4470/4470323.png"/><span>Ticket Status Updation</span></button>
+
+			  <div class="dropdown-content" style="margin-left:120px">
+			    <!-- <a href="conTicket.html">Confirmed Tickets</a> -->
+			    <a href="wlTicket.html">Waiting List Tickets</a>
+			    <!-- <a href="canTicket.html">Cancelled Tickets</a> -->
+			  </div>
+			</div>
+				
+		</nav>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+<body>
+	<input type="date" oninput="console.log(document.getElementById('d').value);">
+</body>
+</html> -->

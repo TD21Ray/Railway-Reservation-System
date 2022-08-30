@@ -1,0 +1,246 @@
+<!doctype html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans&family=Ms+Madi&display=swap" rel="stylesheet">
+    <title>Home Page</title>
+    <link rel="icon" href="" type="image/icon type">
+    
+    <style type="text/css">
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+    	#header {
+    		font-family: 'Dosis';
+			grid-area: header;
+    		background-color: #0c9299;
+    	}
+    	#header > #logo {
+    		position: relative;
+    		padding: 36px;
+    		padding-right: 0;
+    		font-size: 30px;
+    		top: 12px;
+    	}
+    	#header > #logoname {
+    		font-weight: bolder;
+    		font-size: 30px;
+    		position: relative;
+    		left: 0px;
+    	}
+    	#header > #headerlink {
+    		position: relative;
+    		padding: 0 30px;
+    		font-size: 20px;
+    		top: -10px;
+    		left: 71%;
+    	}
+    	#header > #profile {
+    		position: relative;
+    		left: 70%;
+    	}
+    	#header > #profile img {
+    		position: relative;
+    		top: 2px;
+    		left: 6px;
+    		height: 35px;
+    		width: 35px;
+    	}
+
+    	#navbar {
+    		grid-area: navbar;
+    	}
+		#left-panel {
+			background-color: white;
+			grid-area: left;
+		}
+		#welcome {
+			/*			display: flex;
+			align-items: center;*/
+			text-align: center;
+			margin-top: 20% ;
+		}
+		#img-gallery {
+			background-color: white;
+			grid-area: imgGallery;
+			width: 100%;
+			height: 100%;
+			margin-right: -50px;
+			padding-top: 30px;
+		}
+		#start {
+			background-color: white;
+			grid-area: start;
+			padding-left: 200px;
+			font-size: 30px;
+		}
+    	#footer {
+    		font-size: 18px;
+    		font-family: 'Dosis';
+			grid-area: footer;
+    		background-color: #0c9299;
+    	}
+		.grid-container {
+			display: grid;
+			width: 100vw;
+			height: 100vh;
+			grid-template-rows: 10% 8% 57% 10%;
+			grid-template-areas: 
+			'header header header'
+			'navbar navbar navbar'
+			'left left imgGallery'
+			'left left start'
+			'footer footer footer';
+			gap: 10px;
+			/*background-color: #00266f;*/
+		}
+			@keyframes slidy {
+				0% { left: 0%; }
+				17% { left: 0%; }
+				21% { left: -100%; }
+				38% { left: -100%; }
+				42% { left: -200%; }
+				59% { left: -200%; }
+				63% { left: -300%; }
+				80% { left: -300%; }
+				84% { left: -400%; }
+				100% { left: -400%; }
+				}
+				* {
+				  box-sizing: border-box;
+				}
+				body, figure { 
+				  /*margin: 0; background: #00266f;*/
+				  font-weight: 100;
+				}
+				div#captioned-gallery { 
+
+				  width: 600px; 
+				  height: 500px;
+				  overflow: hidden;
+				  margin-left: 0px;
+				  margin-right: 10px;
+
+				}
+				figure.slider { 
+				  position: relative; 
+				  width: 500%;
+				  height: 78%;
+				  font-size: 0; 
+				  animation: 20s slidy infinite; 
+
+				}
+				figure.slider figure { 
+				  width: 20%; height: auto;
+				  display: inline-block;  position: inherit; 
+/*				  border: 3px solid #0c9299;*/
+				  padding: 3px;
+				}
+				figure.slider img { 
+					width: 100%; 
+					height: 100%; 
+					padding: 3px;
+					border: 3px solid darkblue;
+				}
+				figure.slider figure figcaption { 
+				  position: absolute; bottom: 0;
+				  background: rgba(0,0,0,0.4);
+				  color: #fff; width: 100%;
+				  font-size: 2rem; padding: .6rem; 
+				}
+				#navbar button{
+					background-color: #0c9299;
+					border: 3px solid darkblue;
+					border-radius: 10px;
+					width: 250px;
+					padding: 0;
+					margin-left: 25px;
+				}
+				#navbar img{
+					left: 0px;
+					margin-right: 10px;
+					height: 55px;
+					width: 55px;
+					vertical-align: middle;
+
+				}
+				#navbar span{
+					font-family: 'Dosis';
+					font-size: 20px;
+					color: white;
+					vertical-align: middle;
+				}
+				#left-panel h3 {
+					font-family: 'Ms Madi';
+					font-size: 350%;
+					color: #0c9299;
+				}
+				#left-panel h1 {
+					font-family: 'Josefin Sans';
+					font-size: 400%;
+					color: darkblue;
+				}
+    </style>
+</head>
+
+<body>
+
+	<div class="grid-container">
+		<div id="header">
+			<span id="logo"><a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/train.png"/></a></span>
+			<span id="logoname">PNRS RRS</span>
+			<span id="headerlink"><a href="home.html">Home</a> | <a href="index.html">Logout</a></span>
+			<span id="profile"><a href="#"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png"/></a></span>
+		</div>
+
+		<div id="navbar">
+			<nav>
+					<button onclick="location.href='bookTicket.html';" style="margin-left: 80px;"><img src="https://cdn-icons-png.flaticon.com/512/3267/3267459.png"/><span>Book Ticket</span></button>
+					<button onclick="location.href='myTransaction.html';"><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-transaction-history-online-money-service-flaticons-lineal-color-flat-icons-2.png"/><span>Booking History</span></button>
+					<button onclick="location.href='ticketStatus.html';"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-tick-customer-feedback-soft-fill-soft-fill-juicy-fish-2.png"/><span>Ticket Status</span></button>
+					<button onclick="location.href='cancellation.html';"><img src="https://cdn-icons-png.flaticon.com/512/2100/2100803.png"/><span>Cancel Ticket</span></button>
+					<button onclick="location.href='trainCalendar.html';"><img src="https://cdn-icons-png.flaticon.com/512/751/751381.png"/><span>Search Train</span></button>
+			</nav>
+		</div>
+
+		<div id="left-panel">
+			<div id="welcome">
+				<h3>Welcome To</h3><h1>PNRS Railways<br>Reservation System</h1>
+			</div>
+		</div>
+		<div id="img-gallery">
+			<div id="captioned-gallery">
+				<figure class="slider">
+					<figure>
+						<img src="img1.jpg" alt>
+					</figure>
+					<figure>
+						<img src="img2.jpg" alt>
+					</figure>
+					<figure>
+						<img src="img3.jpg" alt>
+					</figure>
+					<figure>
+						<img src="img4.jpg" alt>
+					</figure>
+					<figure>
+						<img src="img5.jpg" alt>
+					</figure>
+				</figure>
+			</div>
+		</div>
+		<a href="bookTicket.html" id="start">Start your Journey!</a>
+		<div id="footer" style="padding-top: 25px;">
+			<span style="margin-right: 500px; margin-left: 50px; font-family: 'Times New Roman';">&copy copyrights</span> <span style="margin-right: 500px;"><a href="#">About Us</a> | <a href="#">FAQ</a> | <a href="#">Contact Us</a></span><span>Designed by PNRS Team</span>
+		</div>
+	</div>
+
+</body>
+</html>
+
+

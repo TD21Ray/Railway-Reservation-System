@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/train.png" type="image/icon type">
+	<link rel="stylesheet" href="payment.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans&family=Ms+Madi&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+.btn {
+	padding: 5px;
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.btn-cancel {
+	padding: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
+  font-size: 20px;
+  width: 120px;
+  margin-left: 10px;
+}
+.btn1 {
+	padding: 5px;
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
+  font-size: 20px;
+  width: 120px;
+}
+::placeholder {
+		    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		    text-align: center;
+		    font-size: large;
+		    color: rgb(219, 219, 212);
+		}
+#MyForm{
+  display: none;
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 14px;
+    background: #ececec;
+} 
+	* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+    	#header {
+    		font-family: 'Dosis';
+    		background-color: #0c9299;
+    		padding: 12px;
+    		padding-bottom: 6px;
+    	}
+    	#header > #logo {
+    		position: relative;
+    		padding: 34px;
+    		padding-left: 25px;
+    		/*padding-right: -10px;*/
+    		font-size: 30px;
+    		top: 0px;
+    	}
+    	#header > #logoname {
+    		margin-left: -35px;
+    		top: -12px;
+    		font-size: 30px;
+    		position: relative;
+    		left: 0px;
+    	}
+    	#header > #headerlink {
+    		position: relative;
+    		padding: 0 10px;
+    		font-size: 20px;
+    		top: -22px;
+    		left: 73%;
+    		margin-right: -7px;
+    		margin-left: 8px;
+    	}
+    	#header > #profile {
+    		position: relative;
+    		top: -10px;
+    		left: 74%;
+    	}
+    	#header > #profile img {
+    		position: relative;
+    		margin-left: -5px;
+    		top: 0px;
+    		left: 6px;
+    		height: 35px;
+    		width: 35px;
+    	}
+    	#navbar button{
+    		margin-top: 10px;
+			background-color: #0c9299;
+			border: 3px solid darkblue;
+			border-radius: 10px;
+			width: 250px;
+			padding: 0;
+			margin-left: 25px;
+		}
+		#navbar img{
+			left: 0px;
+			margin-right: 10px;
+			height: 55px;
+			width: 55px;
+			vertical-align: middle;
+
+		}
+		#navbar span{
+			font-family: 'Dosis';
+			font-size: 20px;
+			color: white;
+			vertical-align: middle;
+		}
+		#footer {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			right: 0;
+    		font-size: 18px;
+    		font-family: 'Dosis';
+    		vertical-align: middle;
+    		background-color: #0c9299;
+    		height: 70px;
+    	}
+    	input {
+			font-size: 26px;
+		    font-family: 'Times New Roman', Times, serif;
+    		border: none;
+   			border-bottom: 2px solid #a6a9ab;
+    		outline: none;
+    		width:200px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<span id="logo"><a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/train.png"/></a></span>
+		<span id="logoname">PNRS RRS</span>
+		<span id="headerlink"><a href="home.html">Home</a> | <a href="index.html">Logout</a></span>
+		<span id="profile"><a href="#"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png"/></a></span>
+	</div>
+
+	<div id="navbar">
+		<nav>
+				<button onclick="location.href='bookTicket.html';" style="margin-left: 80px;"><img src="https://cdn-icons-png.flaticon.com/512/3267/3267459.png"/><span>Book Ticket</span></button>
+				<button onclick="location.href='myTransaction.html';"><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-transaction-history-online-money-service-flaticons-lineal-color-flat-icons-2.png"/><span>Booking History</span></button>
+				<button onclick="location.href='ticketStatus.html';"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-tick-customer-feedback-soft-fill-soft-fill-juicy-fish-2.png"/><span>Ticket Status</span></button>
+				<button onclick="location.href='cancellation.html';"><img src="https://cdn-icons-png.flaticon.com/512/2100/2100803.png"/><span>Cancel Ticket</span></button>
+				<button onclick="location.href='trainCalendar.html';"><img src="https://cdn-icons-png.flaticon.com/512/751/751381.png"/><span>Search Train</span></button>
+		</nav>
+	</div>
+	<div style="margin-top: 50px;" align="center">
+	<h1 align="center" style="margin-bottom: 20px;">Welcome To Payment</h1>
+
+<details>
+  <summary style="font-size:20px;color: #0c9299;padding-bottom: 10px;"><bold>Card Payment</bold></summary>
+ 
+		<form>
+	    
+	        <div id="myForm" class="container">
+	            <form class="form-container" style="margin-left:300px">
+	              <label for="name">Name:</label>
+	              <input type="text" id="name" name="name" placeholder="John"><br><br>
+	              <label for="tname">Card Number:</label>
+	              <input type="text" id="tname" name="tname" placeholder="Doe"><br><br>
+	              
+	                <lable for="exdate">Expiry Date:</lable>
+	                <select id="month" name="month" required>
+	                    <option value="0" selected>January</option>
+	                    <option value="1">February</option>
+	                    <option value="2">March</option>
+	                    <option value="3">April</option>
+	                    <option value="4">May</option>
+	                    <option value="5">June</option>
+	                    <option value="6">July</option>
+	                    <option value="7">August</option>
+	                    <option value="8">September</option>
+	                    <option value="9">October</option>
+	                    <option value="10">November</option>
+	                    <option value="11">December</option>
+	                </select>
+	                
+	                <select id="year" name="year">
+	                    <option value="0" selected>2018</option>
+	                    <option value="1">2019</option>
+	                    <option value="2">2020</option>
+	                    <option value="3">2021</option>
+	                    <option value="4">2022</option>
+	                    <option value="5">2023</option>
+	                    <option value="6">2024</option>
+	                    <option value="7">2025</option>
+	                    <option value="8">2026</option>
+	                    <option value="9">2027</option>
+	                    <option value="10">2028</option>
+	                    <option value="11">2029</option>
+	                    <option value="11">2030</option>
+	                    <option value="11">2031</option>
+	                    <option value="11">2032</option>
+	                    <option value="11">2033</option>
+	                </select><br><br>
+           
+	              <label for="tnumber">CVV:</label>
+	              <input type="text" id="tnumber" name="tnumber" placeholder="123"><br><br>
+	              
+	            
+	              
+				<input type="button"  onclick="addTicket()" value="Done" class="btn1" />
+	            <input  value="Reset" type="button" class="btn-cancel" onclick="closeForm()">
+
+	    	</div>
+    </form>
+    
+ </details>
+ <details>
+    <summary style="font-size:20px;color: #0c9299;padding-bottom: 10px;"><bold>App Payment</bold></summary>
+    
+ 
+		<form>
+	    
+	        <div id="myForm" class="container">
+	            <form class="form-container">
+	              <label for="name">Name:</label>
+	              <input type="text" id="name" name="name" placeholder="John"><br><br>
+	              <label for="tname">UPI ID:</label>
+	              <input type="text" id="tname" name="tname" placeholder="Doe"><br><br>
+	              
+	                
+	              
+				<input type="button"  onclick="addTicket()" value="Done" class="btn1" />
+	      <input  value="Reset" type="button" class="btn-cancel" onclick="closeForm()">
+
+	    	</div>
+    </form>
+</details>
+
+
+	</div>
+	
+
+	<div id="footer" style="padding-top: 25px;">
+		<span style="margin-right: 500px; margin-left: 50px; font-family: 'Times New Roman';vertical-align: middle;">&copy copyrights</span> <span style="margin-right: 500px;"><a href="#">About Us</a> | <a href="#">FAQ</a> | <a href="#">Contact Us</a></span><span>Designed by PNRS Team</span>
+	</div>
+
+
+
+
+	<script>
+		function addTicket() {
+			if(confirm("Payment successfull!!")) {
+				window.open("home.html");
+			}
+			else {
+				window.open("payment.html");
+			}
+
+		}
+		function closeForm() {
+			window.open("payment.html");
+		}
+
+		
+
+
+
+
+	</script>
+</body>
+</html>
+
+

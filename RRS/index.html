@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Niconne&display=swap" rel="stylesheet">
+
+    <title>Login Form</title>
+</head>
+
+<body>
+    <script>
+        var allCookie = document.cookie;
+        console.log(allCookie);
+        var cookieArr = allCookie.split(";");
+        for(var i = 0; i < cookieArr.length; i++)
+        {
+            //console.log(cookieArr[i].split("=")[0]);
+            if(cookieArr[i].split("=")[0].trim() == "InvalidOrNot")
+            {
+                console.log(cookieArr[i].split("=")[1]);
+                if(cookieArr[i].split("=")[1] == "invalid")
+                {
+                    document.getElementById("errMsg").innerHTML = "Invalid Username or Password";
+                }
+                else
+                {
+                    document.getElementById("errMsg").innerHTML = "";
+                }
+                break;
+            }
+        }
+    </script>
+    <div class="container">
+        <div class="image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxicpHc4k5XtWx1x3uZtTJ2u2VAcGGWF3WJw&usqp=CAU" alt="">
+        </div>
+        <div class="content">
+            <h1>Login</h1>
+            <span id="errMsg" style="color:red;font-weight:bolder;"></span>
+            <form action="Login" method="GET">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="text" class="form-control" name="email" id="txt" aria-describedby="helpId" placeholder="Email">
+    
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" class="form-control" name="password" id="txt" placeholder="Password">
+                </div>
+                <a class="fp" href="signup.html">New User? Create an account here</a>
+                <br>
+                <input type="submit" value="Login" class="btn" />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

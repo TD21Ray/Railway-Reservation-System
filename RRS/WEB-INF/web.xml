@@ -1,0 +1,136 @@
+<web-app>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Signup</servlet-name>
+        <servlet-class>Signup</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Signup</servlet-name>
+        <url-pattern>/Signup</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchTrain</servlet-name>
+        <servlet-class>SearchTrain</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchTrain</servlet-name>
+        <url-pattern>/SearchTrain</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>BookTicket</servlet-name>
+        <servlet-class>BookTicket</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookTicket</servlet-name>
+        <url-pattern>/BookTicket</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>History</servlet-name>
+        <servlet-class>History</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>History</servlet-name>
+        <url-pattern>/History</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetStatus</servlet-name>
+        <servlet-class>GetStatus</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetStatus</servlet-name>
+        <url-pattern>/GetStatus</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetRecord</servlet-name>
+        <servlet-class>GetRecord</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetRecord</servlet-name>
+        <url-pattern>/GetRecord</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Cancel</servlet-name>
+        <servlet-class>Cancel</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Cancel</servlet-name>
+        <url-pattern>/Cancel</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Display</servlet-name>
+        <servlet-class>Display</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Display</servlet-name>
+        <url-pattern>/Display</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddTrain</servlet-name>
+        <servlet-class>AddTrain</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddTrain</servlet-name>
+        <url-pattern>/AddTrain</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchTrain1</servlet-name>
+        <servlet-class>SearchTrain1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchTrain1</servlet-name>
+        <url-pattern>/SearchTrain1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchTrain2</servlet-name>
+        <servlet-class>SearchTrain2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchTrain2</servlet-name>
+        <url-pattern>/SearchTrain2</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteTrain</servlet-name>
+        <servlet-class>DeleteTrain</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteTrain</servlet-name>
+        <url-pattern>/DeleteTrain</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WaitingList</servlet-name>
+        <servlet-class>WaitingList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WaitingList</servlet-name>
+        <url-pattern>/WaitingList</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Confirm</servlet-name>
+        <servlet-class>Confirm</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Confirm</servlet-name>
+        <url-pattern>/Confirm</url-pattern>
+    </servlet-mapping>
+</web-app>

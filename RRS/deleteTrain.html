@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete-train</title>
+	<link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/train.png" type="image/icon type">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans&family=Ms+Madi&display=swap" rel="stylesheet">
+	<style type="text/css">
+	* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+    	#header {
+    		font-family: 'Dosis';
+    		background-color: #0c9299;
+    		padding: 12px;
+    		padding-bottom: 6px;
+    	}
+    	#header > #logo {
+    		position: relative;
+    		padding: 34px;
+    		padding-left: 25px;
+    		/*padding-right: -10px;*/
+    		font-size: 30px;
+    		top: 0px;
+    	}
+    	#header > #logoname {
+    		margin-left: -35px;
+    		top: -12px;
+    		font-size: 30px;
+    		position: relative;
+    		left: 0px;
+    	}
+    	#header > #headerlink {
+    		position: relative;
+    		padding: 0 10px;
+    		font-size: 20px;
+    		top: -22px;
+    		left: 75%;
+    		margin-right: -7px;
+    		margin-left: 8px;
+    	}
+
+    	#title{
+    		font-family: 'Dosis';
+    		font-size: 60px;
+    		color: #0c9299;
+    		background-color: powderblue;
+    	}
+    	input{
+    		font-family: 'Dosis';
+    		font-size: 25px;
+    		border-radius: 5px;
+    	}
+    	label{
+    		font-family: 'Dosis';
+    		margin-left: 550px;
+    		font-size: 30px;
+    		color: darkblue;
+    	}
+    	::placeholder {
+		    font-size: 26px;
+		    font-family: 'Times New Roman', Times, serif;
+    		text-align: center;
+		    color: rgb(219, 219, 212);
+		}
+		input {
+			font-size: 26px;
+		    font-family: 'Times New Roman', Times, serif;
+    		border: none;
+   			border-bottom: 2px solid #a6a9ab;
+    		outline: none;
+    		padding-top: 20px;
+    		width:300px;
+    		text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<span id="logo"><a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/train.png"/></a></span>
+		<span id="logoname">PNRS RRS</span>
+		<span id="headerlink"><a href="ahome.html">Home</a> | <a href="index.html">Logout</a></span>
+	</div>
+	<div id="title" align="center">Delete Train</div>
+	<span id="errMsg" style="color:red;font-weight:bolder;"></span>
+	<form style="margin-top: 30px;" action="DeleteTrain" method="GET">
+		<label>Train Id :</label>
+		<input type="text" name="tid" id="tid" placeholder="1" required><br><br>
+		
+		<input type="submit" name="submit" style="width: 200px;margin-left: 650px; padding: 10px;border: 3px solid darkblue;background-color: #0c9299;border-radius: 5px;font-size: 20px;margin-top: 10px;">
+	</form>
+</body>
+</html>

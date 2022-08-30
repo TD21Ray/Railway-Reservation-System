@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+
+
+<head>
+    <title>Ticket-Status</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans&family=Ms+Madi&display=swap" rel="stylesheet">
+    
+</head>
+<style type="text/css">
+
+
+
+button.submit {
+    background: #3300a2;
+    color: white;
+    border-style: outset;
+    border-color: #0300a2;
+    /*height: 50px;*/
+    /*width: 500px;*/
+    /*font: bold 15px arial,sans-serif;*/
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: large;
+    }
+
+p{
+    font-size:20px;
+    /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+}
+
+
+::placeholder {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: large;
+    color: rgb(219, 219, 212);
+}
+
+
+input[type=text] {
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table {
+    width: 100%;
+    height:100%;
+    border: 1px solid black;
+    font-size: 20px;
+    border-collapse:separate;
+    border-radius: 4px;
+    
+}
+
+td {
+    background-color: white;
+    text-align: center;
+    width:30px;
+    border-radius: black;
+    border-radius: 4px;
+    
+}
+
+
+
+th{
+    border:none; 
+}
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  /*top: 15%;*/
+  right: 450px;
+  box-shadow: 3px 5px 10px 10px rgb(168, 165, 165);
+  border: none;
+  z-index: 9px;
+  width: 600px;
+  height: 500px;
+  
+}
+
+
+.form-container {
+  max-width: 600px;
+  /*padding: 20px;*/
+  background-color: rgb(242, 232, 232);
+  border-radius: 4px;
+}
+
+.btn {
+  background-color: darkblue;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
+  text-align: center;
+  background-size: auto;
+}
+
+
+.container#blur.active {
+	filter: blur(4px);
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        #header {
+            font-family: 'Dosis';
+            background-color: #0c9299;
+            padding: 12px;
+            padding-bottom: 6px;
+        }
+        #header > #logo {
+            position: relative;
+            padding: 34px;
+            padding-left: 25px;
+            /*padding-right: -10px;*/
+            font-size: 30px;
+            top: 0px;
+        }
+        #header > #logoname {
+            margin-left: -35px;
+            top: -12px;
+            font-size: 30px;
+            position: relative;
+            left: 0px;
+        }
+        #header > #headerlink {
+            position: relative;
+            padding: 0 10px;
+            font-size: 20px;
+            top: -22px;
+            left: 73%;
+            margin-right: -7px;
+            margin-left: 8px;
+        }
+        #header > #profile {
+            position: relative;
+            top: -10px;
+            left: 74%;
+        }
+        #header > #profile img {
+            position: relative;
+            margin-left: -5px;
+            top: 0px;
+            left: 6px;
+            height: 35px;
+            width: 35px;
+        }
+        #navbar button{
+            margin-top: 10px;
+            background-color: #0c9299;
+            border: 3px solid darkblue;
+            border-radius: 10px;
+            width: 250px;
+            padding: 0;
+            margin:10px 1px 2px 27px;
+        }
+        #navbar img{
+            left: 0px;
+            margin-right: 10px;
+            height: 55px;
+            width: 55px;
+            vertical-align: middle;
+
+        }
+        #navbar span{
+            font-family: 'Dosis';
+            font-size: 20px;
+            color: white;
+            vertical-align: middle;
+        }
+        #footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            font-size: 18px;
+            font-family: 'Dosis';
+            vertical-align: middle;
+            background-color: #0c9299;
+            height: 70px;
+        }
+
+</style>
+	
+
+
+</head>
+<body background="">
+
+    <div class="container" id="blur">
+<header>
+<div id="header">
+        <span id="logo"><a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/train.png"/></a></span>
+        <span id="logoname">PNRS RRS</span>
+        <span id="headerlink"><a href="home.html">Home</a> | <a href="index.html">Logout</a></span>
+        <span id="profile"><a href="#"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png"/></a></span>
+    </div>
+</header>
+<div id="navbar">
+        <nav>
+                <button onclick="location.href='bookTicket.html';" style="margin-left: 80px;"><img src="https://cdn-icons-png.flaticon.com/512/3267/3267459.png"/><span>Book Ticket</span></button>
+                <button onclick="location.href='myTransaction.html';"><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-transaction-history-online-money-service-flaticons-lineal-color-flat-icons-2.png"/><span>Booking History</span></button>
+                <button onclick="location.href='ticketStatus.html';"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-tick-customer-feedback-soft-fill-soft-fill-juicy-fish-2.png"/><span>Ticket Status</span></button>
+                <button onclick="location.href='cancellation.html';"><img src="https://cdn-icons-png.flaticon.com/512/2100/2100803.png"/><span>Cancel Ticket</span></button>
+                <button onclick="location.href='trainCalendar.html';"><img src="https://cdn-icons-png.flaticon.com/512/751/751381.png"/><span>Search Train</span></button>
+        </nav>
+    </div>
+
+<center>
+<p style="margin-top: 80px;color: darkblue;font-size: 20px;font-weight: bold;">
+    Check the booking status of your upcoming trip
+</p>
+	<form>
+        <input class="border" type="text" required id="pnr" name="pnr" maxlength="10" style="border: none;border-bottom: 2px solid #a6a9ab;outline: none;width: 300px;font-size: 20px;padding-top: 20px;text-align: center;" placeholder="10 digit PNR Number"><br>
+	    <br>
+        <input value="Check Now" type="submit" id="submit" onclick="status(); getValues()" style="border: 3px solid darkblue;border-radius: 5px;padding: 15px; background-color: #0c9299;font-size: 16px;margin-top: 1px;">
+    </form>
+        
+</center>
+<div id="footer" style="padding-top: 25px;">
+        <span style="margin-right: 500px; margin-left: 50px; font-family: 'Times New Roman';vertical-align: middle;">&copy copyrights</span> <span style="margin-right: 500px;"><a href="#">About Us</a> | <a href="#">FAQ</a> | <a href="#">Contact Us</a></span><span>Designed by PNRS Team</span>
+    </div>
+</div>
+  
+<div class="form-popup" id="myForm" style=" top: 10%;">
+   
+<table class="form-container" style=" top: 10%;">
+        <tr>
+          <th style="color:darkblue;">Passenger Name</th>
+          <th></th>
+          <th style="color:darkblue;">Date of travel</th>
+        </tr>
+        <tr>
+            <td id="pname"></td>
+            <td style="background:none"></td>
+            <td id="dot"></td>
+           
+        </tr>
+        <tr>
+           <th style="color:darkblue;">Source</th>
+           <th></th> 
+           <th style="color:darkblue;">Destination</th>
+        </tr>
+        <tr>
+            <td id="src" style="padding: 0px;"></td>
+
+            <td style="background:none;padding: 0px;"><img src="https://img.icons8.com/plasticine/100/000000/arrow.png" style="height: 30px; width:30px; border:none; margin-right:0px; margin-left:0px;"></td>
+            <td id="dest" style="padding: 0px;"></td>
+        </tr>
+        <tr>
+            <th style="color:darkblue;">Train No.</th>
+            <th></th>
+            <th style="color:darkblue;">Train Name</th>
+        </tr>
+        <tr>
+            <td id="tno"></td>
+            <td style="background:none"></td>
+            <td id="tname"></td>
+        </tr>
+        <tr>
+            <th style="width: 53%;color:darkblue;">Adult Seat No.</th>
+            <th style="width: 1%"></th>
+            <th style="width:52%;color:darkblue;">Child Seat No.</th>
+        </tr>
+        <tr>
+            <td id="asno"></td>
+            <td style="background:none"></td>
+            <td id="csno"></td>
+        </tr>
+        <tr>
+            <th colspan="3" style="padding-left: 25px;color:darkblue;">Status</th>
+        </tr>
+        <tr>
+            <td style="background:none"></td>
+            <td id="status" style="text-align:center"></td>
+            <td style="background:none"></td>
+        </tr>
+                   
+    </table>
+    <center><button onclick="location.href='home.html'" type="button" class="btn">OK</a></button></center>
+</div>
+    
+
+<script>
+
+    function status() {
+      document.getElementById("myForm").style.display = "block";
+      var blur = document.getElementById('blur');
+      blur.classList.toggle('active')
+    }
+    function getValues() {
+        // window.alert("inside getValues()");
+        var xhttp;
+        var ticno = document.getElementById('pnr').value;
+        var url = "GetStatus?ticno="+ticno;
+        // alert(url);
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            // alert("inside xhttp");
+            if (this.readyState == 4 && this.status == 200) {
+                // alert("inside if");
+                var val = this.responseText;
+                const sl = val.split("*");
+                // alert(sl);
+                document.getElementById('pname').innerHTML = sl[0];
+                document.getElementById('dot').innerHTML = sl[1];
+                document.getElementById('src').innerHTML = sl[2];
+                document.getElementById('dest').innerHTML = sl[3];
+                document.getElementById('tno').innerHTML = sl[4];
+                document.getElementById('tname').innerHTML = sl[5];
+                document.getElementById('asno').innerHTML = sl[6];
+                document.getElementById('csno').innerHTML = sl[7];
+                document.getElementById('status').innerHTML = sl[8];
+                // alert(val);
+                // document.getElementById("add-table-here").innerHTML = val; 
+                document.getElementById("submit").remove();
+            }
+        };
+        xhttp.open("GET", url, false);
+        xhttp.send();
+    }
+</script>
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View-train</title>
+	<link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/train.png" type="image/icon type">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans&family=Ms+Madi&display=swap" rel="stylesheet">
+	<style type="text/css">
+	* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+    	#header {
+    		font-family: 'Dosis';
+    		background-color: #0c9299;
+    		padding: 12px;
+    		padding-bottom: 6px;
+    	}
+    	#header > #logo {
+    		position: relative;
+    		padding: 34px;
+    		padding-left: 25px;
+    		/*padding-right: -10px;*/
+    		font-size: 30px;
+    		top: 0px;
+    	}
+    	#header > #logoname {
+    		margin-left: -35px;
+    		top: -12px;
+    		font-size: 30px;
+    		position: relative;
+    		left: 0px;
+    	}
+    	#header > #headerlink {
+    		position: relative;
+    		padding: 0 10px;
+    		font-size: 20px;
+    		top: -22px;
+    		left: 75%;
+    		margin-right: -7px;
+    		margin-left: 8px;
+    	}
+    	#title{
+    		font-family: 'Dosis';
+    		font-size: 60px;
+    		color: #0c9299;
+    		background-color: powderblue;
+    	}
+    	td,th{
+    		padding: 10px;
+    		text-align: center;
+    	}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<span id="logo"><a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/train.png"/></a></span>
+		<span id="logoname">PNRS RRS</span>
+		<span id="headerlink"><a href="ahome.html">Home</a> | <a href="index.html">Logout</a></span>
+		<!-- <span id="profile"><a href="#"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png"/></a></span> -->
+	</div>
+	<div id="title" align="center" >View Trains</div>
+	<form style="margin-top: 20px;" name="searchForm" action="SearchTrain1">
+		<span class="search">
+			<label for="source" style="margin-left:340px;color: darkblue;font-size: 20px;font-weight: bold;"> Source: </label>
+			<select id="source" name="source" required style="padding: 10px; width: 18%;">
+				<option value="" disable selected hidden>Choose Source</option>
+				<option value="Chennai">Chennai</option>
+		        <option value="Cbe">Coimbatore</option>
+		        <option value="Erode">Erode</option>
+		        <option value="Tirupur">Tirupur</option>
+		        <option value="Bengalore">Bengalore</option>
+		        <option value="Madurai">Madurai</option> 
+		    </select>
+		</span>
+
+	    <span class="search1">
+	    	<label for="dest" style="margin-left:100px;color: darkblue;font-size: 20px;font-weight: bold;"> Destination: </label>
+			<select id="dest" name="destination" required style="padding: 10px; width: 18%;">
+				<option value="" disable selected hidden>Choose Destination</option>
+				<option value="Chennai">Chennai</option>
+		        <option value="Cbe">Coimbatore</option>
+		        <option value="Erode">Erode</option>
+		        <option value="Tirupur">Tirupur</option>
+		        <option value="Bengalore">Bengalore</option>
+		        <option value="Madurai">Madurai</option>
+			</select>
+	    </span>
+	    <div style="text-align: center; margin-top: 20px;margin-bottom: 20px;">
+	  	<input type="submit" class="submit" id="Submitbtn" style="border: 3px solid darkblue;border-radius: 5px;padding: 10px; background-color: #0c9299;font-size: 20px;width: 200px;height: 48.4px;margin-left: 30px;margin-top: 10px;" onclick ="searchTrain()" value="Submit">
+	  </div>
+	</form>
+	<div id="add-table-here" style="margin-left:430px;margin-top:50px"></div>
+
+	<script type="text/javascript">
+		function searchTrain() {
+			var xhttp;
+			var src = document.searchForm.source.value;
+			var dest = document.searchForm.destination.value;
+			var url = "SearchTrain1?source="+src+"&destination="+dest;
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				// alert("inside xhttp");
+				if (this.readyState == 4 && this.status == 200) {
+					// alert("inside if");
+					var val = this.responseText;
+					// alert(val);
+					console.log("run");
+					document.getElementById('Submitbtn').remove();
+					document.getElementById("add-table-here").innerHTML = val; 
+				}
+			};
+			xhttp.open("GET", url, false);
+			xhttp.send();
+		}
+	</script>
+</body>
+</html>

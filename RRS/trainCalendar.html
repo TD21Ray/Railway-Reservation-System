@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+
+
+<head>
+
+	<title>Train-Details</title>
+	<link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/train.png" type="image/icon type">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans&family=Ms+Madi&display=swap" rel="stylesheet">
+	<link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/train.png" type="image/icon type">
+	<link rel="stylesheet" href="searchtrain.css">
+	<style type="text/css">
+		th,td{
+			padding: 10px;
+		}
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+    	#header {
+    		font-family: 'Dosis';
+    		background-color: #0c9299;
+    		padding: 12px;
+    		padding-bottom: 6px;
+    	}
+    	#header > #logo {
+    		position: relative;
+    		padding: 34px;
+    		padding-left: 25px;
+    		/*padding-right: -10px;*/
+    		font-size: 30px;
+    		top: 0px;
+    	}
+    	#header > #logoname {
+    		margin-left: -35px;
+    		top: -12px;
+    		font-size: 30px;
+    		position: relative;
+    		left: 0px;
+    	}
+    	#header > #headerlink {
+    		position: relative;
+    		padding: 0 10px;
+    		font-size: 20px;
+    		top: -22px;
+    		left: 73%;
+    		margin-right: -7px;
+    		margin-left: 8px;
+    	}
+    	#header > #profile {
+    		position: relative;
+    		top: -10px;
+    		left: 74%;
+    	}
+    	#header > #profile img {
+    		position: relative;
+    		margin-left: -5px;
+    		top: 0px;
+    		left: 6px;
+    		height: 35px;
+    		width: 35px;
+    	}
+		#navbar {
+			margin-left: -10px;
+		}
+    	#navbar button{
+    		margin-top: 10px;
+			background-color: #0c9299;
+			border: 3px solid darkblue;
+			border-radius: 10px;
+			width: 250px;
+			padding: 0;
+			margin:10px 1px 2px 27px;
+		}
+		#navbar img{
+			left: 0px;
+			margin-right: 10px;
+			height: 55px;
+			width: 55px;
+			vertical-align: middle;
+
+		}
+		#navbar span{
+			font-family: 'Dosis';
+			font-size: 20px;
+			color: white;
+			vertical-align: middle;
+		}
+		#footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			right: 0;
+    		font-size: 18px;
+    		font-family: 'Dosis';
+    		vertical-align: middle;
+    		background-color: #0c9299;
+    		height: 70px;
+    	}
+
+		td,th{
+    		padding: 10px;
+    		text-align: center;
+    	}
+		
+	</style>
+
+</head>
+<body background="">
+
+
+
+<div id="header">
+		<span id="logo"><a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/train.png"/></a></span>
+		<span id="logoname">PNRS RRS</span>
+		<span id="headerlink"><a href="home.html">Home</a> | <a href="index.html">Logout</a></span>
+		<span id="profile"><a href="#"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png"/></a></span>
+	</div>
+
+	<div id="navbar">
+		<nav>
+				<button onclick="location.href='bookTicket.html';" style="margin-left: 90px;"><img src="https://cdn-icons-png.flaticon.com/512/3267/3267459.png"/><span>Book Ticket</span></button>
+				<button onclick="location.href='myTransaction.html';"><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-transaction-history-online-money-service-flaticons-lineal-color-flat-icons-2.png"/><span>Booking History</span></button>
+				<button onclick="location.href='ticketStatus.html';"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-tick-customer-feedback-soft-fill-soft-fill-juicy-fish-2.png"/><span>Ticket Status</span></button>
+				<button onclick="location.href='cancellation.html';"><img src="https://cdn-icons-png.flaticon.com/512/2100/2100803.png"/><span>Cancel Ticket</span></button>
+				<button onclick="location.href='trainCalendar.html';"><img src="https://cdn-icons-png.flaticon.com/512/751/751381.png"/><span>Search Train</span></button>
+		</nav>
+	</div>
+
+<form name="searchForm" style="padding: 30px; padding-left: 200px; font-family: 'Arial';">
+	<span class="search" style="padding: 0 30px;">
+		<label for="source" style="margin-left:50px;color: darkblue;font-size: 20px;font-weight: bold;"> Source: </label>
+		<select id="source" name="src" required style="padding: 10px; width: 18%;">
+			<option value="" disable selected hidden>Choose Source</option>
+			<option value="Chennai">Chennai</option>
+	        <option value="Cbe">Coimbatore</option>
+	        <option value="Erode">Erode</option>
+	        <option value="Tirupur">Tirupur</option>
+	        <option value="Bengalore">Bengalore</option>
+	        <option value="Madurai">Madurai</option>
+	        
+	    </select>
+	</span>
+
+    <span class="search1" style="padding-right: 30px;">
+    	<label for="dest" style="color: darkblue;font-size: 20px;font-weight: bold;"> Destination: </label>
+		<select id="dest" name="dest" required style="padding: 10px; width: 18%;">
+			<option value="" disable selected hidden>Choose Destination</option>
+			<option value="Chennai">Chennai</option>
+	        <option value="Cbe">Coimbatore</option>
+	        <option value="Erode">Erode</option>
+	        <option value="Tirupur">Tirupur</option>
+	        <option value="Bengalore">Bengalore</option>
+	        <option value="Madurai">Madurai</option>
+		</select>
+    </span>
+
+	<label for="dateoftravel" style="color: darkblue;font-size: 20px;font-weight: bold;">Travel Date:</label>
+  	<input type="date" id="dateoftravel" name="dot" required style="padding: 10px;"><br>
+  	<input type="submit" id="submit" onclick ="showTrain()" value="Search" style="border: 3px solid darkblue;border-radius: 5px;padding: 16px; background-color: #0c9299;font-size: 16px;margin-left: 500px;margin-top: 20px;width: 117.81px;">
+  	<!-- <button type="submit" value="Submit" style="margin-top: 20px;margin-left: 500px;padding: 10px;">Submit</button> -->
+</form><br><br>
+<center>
+	<div id="add-table-here"></div>
+</center>
+<!-- <table border="2" cellspacing="3" cellpadding="8" bordercolor="Blue" style="margin-left:350px;margin-top:-30px">
+	
+	<tr>
+		<th>Ticket Number</th>
+		<th>Train id</th>
+		<th>Train Name</th>
+		<th>Source</th>
+		<th>Destination</th>
+		<th>Date of Travel</th>
+		<th>No. of Seats</th>
+		<th>Status</th>
+	</tr>
+	<tr>
+		<td>1001</td>
+		<td>901</td>
+		<td>Chennai Express</td>
+		<td>Chennai</td>
+		<td>Bengalore</td>
+		<td>12-6-2022</td>
+		<td>72</td>
+		<td>x</td>
+
+	</tr>
+	<tr>
+		<td>1002</td>
+		<td>902</td>
+		<td>Rajdhani Express</td>
+		<td>Coimbatore</td>
+		<td>Bengalore</td><td>12-6-2022</td>
+		<td>72</td>
+		<td>y</td>
+	</tr>
+	<tr>
+		<td>1003</td>
+		<td>903</td>
+		<td>Indian Express</td>
+		<td>Erode</td>
+		<td>Chennai</td><td>12-6-2022</td>
+		<td>72</td>
+		<td>z</td>
+	</tr>
+
+</table> -->
+
+<br><br><br><br><br><br>
+<div id="footer" style="padding-top: 25px;">
+		<span style="margin-right: 500px; margin-left: 50px; font-family: 'Times New Roman';vertical-align: middle;">&copy copyrights</span> <span style="margin-right: 500px;"><a href="#">About Us</a> | <a href="#">FAQ</a> | <a href="#">Contact Us</a></span><span>Designed by PNRS Team</span>
+	</div>
+
+
+	<script>
+		document.getElementById("dateoftravel").min=new Date().toISOString().split('T')[0];
+		function showTrain() {
+			// window.alert("inside showTrain()");
+			var xhttp;
+			var src = document.searchForm.src.value;
+			var dest = document.searchForm.dest.value;
+			var url = "Display?source="+src+"&destination="+dest;
+			// alert(url);
+			xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				// alert("inside xhttp");
+				if (this.readyState == 4 && this.status == 200) {
+					// alert("inside if");
+					var val = this.responseText;
+					// alert(val);
+					document.getElementById("add-table-here").innerHTML = val;
+					document.getElementById("submit").remove();
+				}
+			};
+			xhttp.open("GET", url, false);
+			xhttp.send();
+		}
+	</script>
+</body>
+
+
+
+</html>

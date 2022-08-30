@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+
+
+<head>
+
+	<title>Cancel-Ticket</title>
+	<link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/train.png" type="image/icon type">
+	<link rel="stylesheet" href="cancel.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans&family=Ms+Madi&display=swap" rel="stylesheet">
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+    	#header {
+    		font-family: 'Dosis';
+    		background-color: #0c9299;
+    		padding: 12px;
+    		padding-bottom: 6px;
+    	}
+    	#header > #logo {
+    		position: relative;
+    		padding: 34px;
+    		padding-left: 25px;
+    		/*padding-right: -10px;*/
+    		font-size: 30px;
+    		top: 0px;
+    	}
+    	#header > #logoname {
+    		margin-left: -35px;
+    		top: -12px;
+    		font-size: 30px;
+    		position: relative;
+    		left: 0px;
+    	}
+    	#header > #headerlink {
+    		position: relative;
+    		padding: 0 10px;
+    		font-size: 20px;
+    		top: -22px;
+    		left: 73%;
+    		margin-right: -7px;
+    		margin-left: 8px;
+    	}
+    	#header > #profile {
+    		position: relative;
+    		top: -10px;
+    		left: 74%;
+    	}
+    	::placeholder {
+		    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		    text-align: center;
+		    font-size: large;
+		    color: rgb(219, 219, 212);
+		}
+		input.border {
+			font-size: xx-large;
+		    font-family: 'Times New Roman', Times, serif;
+    		border: none;
+   			border-bottom: 2px solid #a6a9ab;
+    		outline: none;
+    		width:200px;
+		}
+    	#header > #profile img {
+    		position: relative;
+    		margin-left: -5px;
+    		top: 0px;
+    		left: 6px;
+    		height: 35px;
+    		width: 35px;
+    	}
+    	#navbar button{
+    		margin-top: 10px;
+			background-color: #0c9299;
+			border: 3px solid darkblue;
+			border-radius: 10px;
+			width: 250px;
+			padding: 0;
+			margin:10px 1px 2px 27px;
+		}
+		#navbar img{
+			left: 0px;
+			margin-right: 10px;
+			height: 55px;
+			width: 55px;
+			vertical-align: middle;
+
+		}
+		#navbar span{
+			font-family: 'Dosis';
+			font-size: 20px;
+			color: white;
+			vertical-align: middle;
+		}
+		#footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			right: 0;
+    		font-size: 18px;
+    		font-family: 'Dosis';
+    		vertical-align: middle;
+    		background-color: #0c9299;
+    		height: 70px;
+    	}
+		p{
+			font-size:20px;
+			font-family: Arial, Helvetica, sans-serif;
+			/*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+		}
+		.container#blur.active {
+			filter: blur(4px);
+		}
+		td,th{
+    		padding: 10px;
+    		text-align: center;
+    	}
+
+	</style>
+</head>
+<body>
+<body background="">
+    <div class="container" id="blur">
+    	<div id="header">
+		<span id="logo"><a href="#"><img src="https://img.icons8.com/ios-filled/50/000000/train.png"/></a></span>
+		<span id="logoname">PNRS RRS</span>
+		<span id="headerlink"><a href="home.html">Home</a> | <a href="index.html">Logout</a></span>
+		<span id="profile"><a href="#"><img src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/000000/external-User-essential-collection-bearicons-glyph-bearicons.png"/></a></span>
+	</div>
+
+	<div id="navbar">
+		<nav>
+				<button onclick="location.href='bookTicket.html';" style="margin-left: 80px;"><img src="https://cdn-icons-png.flaticon.com/512/3267/3267459.png"/><span>Book Ticket</span></button>
+				<button onclick="location.href='myTransaction.html';"><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/344/external-transaction-history-online-money-service-flaticons-lineal-color-flat-icons-2.png"/><span>Booking History</span></button>
+				<button onclick="location.href='ticketStatus.html';"><img src="https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-tick-customer-feedback-soft-fill-soft-fill-juicy-fish-2.png"/><span>Ticket Status</span></button>
+				<button onclick="location.href='cancellation.html';"><img src="https://cdn-icons-png.flaticon.com/512/2100/2100803.png"/><span>Cancel Ticket</span></button>
+				<button onclick="location.href='trainCalendar.html';"><img src="https://cdn-icons-png.flaticon.com/512/751/751381.png"/><span>Search Train</span></button>
+		</nav>
+	</div>
+	
+    <form style="margin-top:30px;">
+    	<center>
+        	<p for="pnr" style="font-size: 20px;margin-top: 80px;color: darkblue;font-size: 20px;font-weight: bold;">Enter PNR Number</p>
+        	<input type="text" id="pnr" name="pnr" maxlength="10" placeholder="10 digit PNR Number" style="border: none;border-bottom: 2px solid #a6a9ab;outline: none;width: 300px;margin-top: 10px;text-align: center;font-size: 20px;padding-top: 10px;" required><br>
+        	<input type="submit" id="submit" value="Check Now" onclick="getRecord()" style="border: 3px solid darkblue;border-radius: 5px;padding: 15px; background-color: #0c9299;font-size: 16px;margin-top: 20px;">
+    	</center>
+	</form>
+
+	<div id="add-table-here" style="margin-left:-150px"></div>
+    <!-- <br><br><br><br>
+
+	<table border="2" cellspacing="3" cellpadding="30" bordercolor="Blue" style="margin-left:420px;margin-top: -30px;">
+		
+		<tr>
+			<th>Train Name</th>
+			<th>Train Number</th>
+			<th>Price</th>
+			<th>Source</th>
+			<th>Destination</th>
+			<th>Available Seats</th>
+			<th>Duration</th>
+			<th>Cancel Now</th>
+		</tr>
+	    <tr>
+			<td>Chennai Express</td>
+			<td>1001</td>
+			<td>540</td>
+			<td>Chennai</td>
+			<td>Bengalore</td>
+			<td>72</td>
+			<td>7 hour</td>
+			<td><button class="open-button" onclick="cancel()">Cancel Ticket</button></td>
+		</tr>
+
+	</table> -->
+    <div id="footer" style="padding-top: 25px;">
+		<span style="margin-right: 500px; margin-left: 50px; font-family: 'Times New Roman';vertical-align: middle;">&copy copyrights</span> <span style="margin-right: 500px;"><a href="#">About Us</a> | <a href="#">FAQ</a> | <a href="#">Contact Us</a></span><span>Designed by PNRS Team</span>
+	</div>
+    
+</div>
+<div class="container" id="blur1"></div>
+<div class="form-popup" id="myForm1" style="width: 600px;">
+    <form class="form-container">
+    <center><p style="font-size:20px">Are you sure?</p></center>  
+    <center><button style="margin-right:50px" type="button" class="btn" onclick="yes()">YES</a></button><button  type="button" onclick="no()" class="btn">NO</a></button></center>
+    </form>   
+</div>
+
+<div class="form-popup" id="myForm2" style="width: 600px;">
+    <form class="form-container">
+   
+    <center><p style="font-size:20px">Cancelled Successfully!!!</p></center>  
+    <center><button onclick="location.href='home.html'" type="button" class="btn">OK</a></button></center>
+    </form>   
+</div>
+<script>
+	function getRecord() {
+		// window.alert("inside getRecord()");
+		var xhttp;
+		var ticno = document.getElementById('pnr').value;
+		var url = "GetRecord?ticno="+ticno;
+		// alert(url);
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			// alert("inside xhttp");
+			if (this.readyState == 4 && this.status == 200) {
+				// alert("inside if");
+				var val = this.responseText;
+				// alert(val);
+				document.getElementById("add-table-here").innerHTML = val;
+				document.getElementById("submit").remove();
+			}
+		};
+		xhttp.open("GET", url, false);
+		xhttp.send();
+	}
+	function cancel() {
+		document.getElementById("myForm1").style.display = "block";
+		var blur = document.getElementById('blur');
+		blur.classList.toggle('active');
+	}
+
+	function yes() {
+		document.getElementById("myForm2").style.display = "block";
+		var blur = document.getElementById('blur1');
+		blur.classList.toggle('active');
+		cancel();
+	}
+	function no() {
+		document.getElementById("myForm1").style.display = "none";
+		var blur = document.getElementById('blur');
+		blur.classList.toggle('active');
+	}
+
+	function cancel() {
+		// window.alert("inside cancel()");
+		var xhttp;
+		var ticno = document.getElementById('pnr').value;
+		var url = "Cancel?ticno="+ticno;
+		// alert(url);
+		xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			// alert("inside xhttp");
+			if (this.readyState == 4 && this.status == 200) {
+				alert("Ticket Cancelled!!!");
+			}
+		};
+		xhttp.open("GET", url, false);
+		xhttp.send();
+	}
+</script>
+
+<br><br><br><br><br><br>
+
+
+</body>
+</html>
